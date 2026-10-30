@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¡Estás invitado! | Cumpleaños de Yordan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Fondo: partículas doradas, globos y confeti -->
+  <canvas id="particulas" aria-hidden="true"></canvas>
+  <div id="globos" aria-hidden="true"></div>
+  <canvas id="confeti" aria-hidden="true"></canvas>
+
+  <!-- ===== PANTALLA DE BIENVENIDA ===== -->
+  <section id="bienvenida" class="bienvenida">
+    <div class="bienvenida-contenido">
+      <div class="emoji-grande">🎁</div>
+      <h1 class="titulo-dorado">¡ESTÁS INVITADO!</h1>
+      <p class="subtitulo">Una celebración especial está por comenzar...</p>
+      <button id="btnAbrir" class="btn btn-dorado pulso">ABRIR INVITACIÓN</button>
+    </div>
+  </section>
+
+  <!-- ===== INVITACIÓN PRINCIPAL ===== -->
+  <main id="invitacion" class="invitacion oculto">
+
+    <!-- Portada -->
+    <section class="seccion portada reveal">
+      <p class="sobretitulo">✨ Estás cordialmente invitado ✨</p>
+      <h2 class="titulo-grande">¡FELIZ CUMPLEAÑOS,<br><span id="nombreTitulo" class="titulo-dorado">YORDAN</span>!</h2>
+      <div class="pastel" aria-hidden="true">🎂</div>
+      <p class="mensaje">
+        Los momentos especiales se disfrutan mucho más cuando se comparten con las personas que queremos.
+        Por eso queremos invitarte a celebrar una fecha muy especial:
+        ¡el cumpleaños de <strong id="nombreMensaje">Yordan</strong>!
+      </p>
+    </section>
+
+    <!-- Detalles -->
+    <section class="seccion reveal">
+      <h3 class="titulo-seccion">Detalles del evento</h3>
+      <div class="tarjeta detalles">
+        <div class="detalle"><span class="icono">🎉</span><div><small>Celebración</small><b id="detCelebracion"></b></div></div>
+        <div class="detalle"><span class="icono">💻</span><div><small>Modalidad</small><b>Reunión virtual por Google Meet</b></div></div>
+        <div class="detalle"><span class="icono">📅</span><div><small>Fecha</small><b id="detFecha"></b></div></div>
+        <div class="detalle"><span class="icono">⏰</span><div><small>Hora</small><b id="detHora"></b></div></div>
+        <div class="detalle"><span class="icono">🔗</span><div><small>Enlace de reunión</small><a id="detEnlace" href="#" target="_blank" rel="noopener noreferrer"></a></div></div>
+      </div>
+      <a id="btnMeet" class="btn btn-dorado" href="#" target="_blank" rel="noopener noreferrer">UNIRME A LA CELEBRACIÓN</a>
+    </section>
+
+    <!-- Cuenta regresiva -->
+    <section class="seccion reveal">
+      <h3 class="titulo-seccion">Falta muy poco...</h3>
+      <div id="contador" class="contador">
+        <div class="caja"><span id="cDias">00</span><small>Días</small></div>
+        <div class="caja"><span id="cHoras">00</span><small>Horas</small></div>
+        <div class="caja"><span id="cMinutos">00</span><small>Minutos</small></div>
+        <div class="caja"><span id="cSegundos">00</span><small>Segundos</small></div>
+      </div>
+      <p id="mensajeFinal" class="mensaje-comenzo oculto">🎊 ¡La celebración ha comenzado! Únete ahora 🎊</p>
+    </section>
+
+    <!-- Confirmación -->
+    <section class="seccion reveal">
+      <h3 class="titulo-seccion">¿NOS ACOMPAÑAS EN ESTA CELEBRACIÓN?</h3>
+      <div class="botones-rsvp">
+        <button id="btnSi" class="btn btn-dorado grande">¡SÍ, ASISTIRÉ!</button>
+        <button id="btnNo" class="btn btn-borde grande">NO PODRÉ ASISTIR</button>
+      </div>
+      <p id="respuesta" class="respuesta oculto" role="status"></p>
+    </section>
+
+    <!-- Cierre -->
+    <section class="seccion cierre reveal">
+      <div class="emoji-grande" aria-hidden="true">🥳</div>
+      <h2 class="titulo-grande titulo-dorado">¡TE ESPERAMOS!</h2>
+      <p class="mensaje">Tu presencia hará de este día un recuerdo inolvidable.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
